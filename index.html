@@ -1368,20 +1368,13 @@
     // Dynamic QR generation
     function generatePageQR() {
       const qrImg = document.getElementById("qr-img");
-      let currentUrl = window.location.href;
-      // Safeguard for development placeholder servers
-      if (currentUrl.includes("localhost") || currentUrl.includes("127.0.0.1")) {
-        currentUrl = "https://sirleibeautyspa.com";
-      }
+      const currentUrl = "https://sirlei-beauty-spa.vercel.app/";
       qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + encodeURIComponent(currentUrl);
     }
 
     // Share system with fallback
     function handleSharePage() {
-      let currentUrl = window.location.href;
-      if (currentUrl.includes("localhost") || currentUrl.includes("127.0.0.1")) {
-        currentUrl = "https://sirleibeautyspa.com";
-      }
+      const currentUrl = "https://sirlei-beauty-spa.vercel.app/";
 
       if (navigator.share) {
         navigator.share({
