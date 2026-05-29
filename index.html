@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sirlei Beauty Spa | Facial SPA in Brookfield, CT</title>
+  <meta name="description" content="Sanctuary of tranquility & transformation in Connecticut. Experience luxury facial aesthetics, acne control, micropigmentation & beauty wellness.">
+  <meta property="og:title" content="Sirlei Beauty Spa | Facial SPA in Brookfield, CT">
+  <meta property="og:description" content="Sanctuary of tranquility & transformation in Connecticut. Personalized premium facials, micropigmentation & beauty wellness.">
+  <meta property="og:image" content="https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Brookfield-CT.jpeg">
+  <meta property="og:type" content="website">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;1,300;1,400&family=Jost:wght=300;400;500;600&display=swap');
+
+    :root {
+      --cream:       #faf7f4;   /* main page background */
+      --blush-light: #ffffff;   /* alternating section backgrounds */
+      --blush-mid:   #f0d5cc;   /* cards, accordion items background */
+      --blush-accent:#ca968b;   /* borders, dividers, icon accents */
+      --rose-dark:   #9e6b62;   /* button borders on hover, active accordion border */
+      --text-dark:   #2a1f1d;   /* headings */
+      --text-body:   #4a3a38;   /* body text, descriptions */
+      --text-muted:  #7a6360;   /* secondary labels, hours, footnotes */
+      --white:       #ffffff;   /* cards, popup background */
+      --overlay:     rgba(42, 31, 29, 0.22); /* hero overlay */
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Jost', sans-serif;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--blush-light);
+      font-family: var(--font-body);
+      color: var(--text-body);
+      display: block;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* 100% Mobile-first wrapper (Single Column, always centered on desktop) */
+    .app-container {
+      width: 100%;
+      max-width: 430px;
+      background-color: var(--cream);
+      min-height: 100vh;
+      margin: 0 auto;
+      box-shadow: 0 12px 40px rgba(42, 31, 29, 0.08);
+      position: relative;
+      display: block;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Top Sticky Language Bar */
+    .lang-switcher {
+      position: sticky;
+      top: 0;
+      height: 38px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--blush-accent);
+      z-index: 1000;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 6px;
+      transition: color var(--transition-speed);
+      font-family: var(--font-body);
+    }
+
+    .lang-btn.active {
+      color: var(--text-dark);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .lang-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 6px;
+      right: 6px;
+      height: 1px;
+      background-color: var(--rose-dark);
+    }
+
+    .lang-divider {
+      color: rgba(202, 150, 139, 0.4);
+    }
+
+    /* Section Structure with 52px 24px padding and 0.55s animations */
+    section {
+      padding: 52px 24px;
+      border-bottom: 1px solid rgba(202, 150, 139, 0.12);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Forced Alternating Section Background Pattern */
+    #hero {
+      position: relative;
+      height: calc(100vh - 38px);
+      min-height: 520px;
+      background: linear-gradient(var(--overlay), var(--overlay)), url('https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Brookfield-CT.jpeg') no-repeat 80% center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      padding: 24px 24px 105px 24px;
+      border-bottom: none;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      overflow: hidden;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+    #cta-buttons { background-color: var(--cream) !important; }
+    #about { background-color: var(--blush-light) !important; }
+    #about .section-title {
+      font-size: 28.6px;
+    }
+    #services { background-color: var(--cream) !important; }
+    #before-after { background-color: var(--blush-light) !important; }
+    #faq { background-color: var(--cream) !important; }
+    #hours { background-color: var(--blush-light) !important; }
+    #bottom-ctas { background-color: var(--cream) !important; }
+    #location-map { background-color: var(--blush-light) !important; }
+    #share-section {
+      background-color: var(--cream) !important;
+      border-bottom: none !important;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-style: italic;
+      font-weight: 300;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--blush-mid);
+      font-weight: 400;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 24px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #ffffff;
+      opacity: 0.8;
+      animation: pulseUpDown 1.8s infinite ease-in-out;
+    }
+
+    .scroll-indicator span {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 6px;
+    }
+
+    /* Buttons Styling (6px border-radius minimum, luxury look) */
+    .btn-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 24px;
+      border-radius: 6px;                    /* slightly rounded, NOT pill shape */
+      border: 1px solid var(--blush-accent);
+      background: transparent;
+      color: var(--text-body);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover, .btn:active {
+      background: var(--blush-mid);
+      border-color: var(--rose-dark);
+      color: var(--text-dark);
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 1.5;
+      fill: none;
+      stroke: currentColor;
+    }
+
+    /* Primary button variant */
+    .btn-primary {
+      background: var(--blush-accent);
+      border-color: var(--blush-accent);
+      color: var(--white);
+      letter-spacing: 0.14em;
+    }
+    .btn-primary:hover, .btn-primary:active {
+      background: var(--rose-dark);
+      border-color: var(--rose-dark);
+      color: var(--white);
+    }
+
+    /* About Section */
+    .about-header, .section-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .mini-logo {
+      width: 144px;
+      height: 144px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      opacity: 0.95;
+      border: 1.5px solid var(--blush-accent);
+      background-color: var(--white);
+      padding: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--text-dark);
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+      width: 100%;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 1px;
+      background-color: var(--blush-accent);
+    }
+
+    .section-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-body);
+      text-align: justify;
+      font-weight: 300;
+      font-family: var(--font-body);
+    }
+
+    /* Accordion (Services & FAQ) */
+    .accordion-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .accordion-item {
+      border: 1px solid var(--blush-mid);
+      border-radius: 6px;
+      background: var(--white);
+      overflow: hidden;
+      transition: all var(--transition-speed) ease;
+      padding: 4px 16px;
+    }
+
+    .accordion-item.open {
+      border-color: var(--blush-accent);
+      background-color: var(--blush-light);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      padding: 14px 0;
+      background: none;
+      border: none;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .accordion-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: 0.04em;
+    }
+
+    .accordion-icon {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .accordion-icon::before, .accordion-icon::after {
+      content: '';
+      position: absolute;
+      background-color: var(--blush-accent);
+      transition: transform var(--transition-speed) ease;
+    }
+
+    /* Vertical line */
+    .accordion-icon::before {
+      top: 0;
+      left: 6px;
+      width: 2px;
+      height: 14px;
+    }
+
+    /* Horizontal line */
+    .accordion-icon::after {
+      top: 6px;
+      left: 0;
+      width: 14px;
+      height: 2px;
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-speed) ease;
+    }
+
+    .accordion-inner {
+      padding: 8px 0 16px 0;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-body);
+      font-weight: 300;
+    }
+
+    /* Before & After Carousel (Single Visible Image Sliding Track) */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(42, 31, 29, 0.04);
+    }
+
+    .carousel-stage {
+      display: flex;
+      transition: transform 700ms ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(202, 150, 139, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--text-dark);
+      cursor: pointer;
+      z-index: 10;
+      outline: none;
+      transition: all var(--transition-speed);
+      font-size: 16px;
+    }
+
+    .carousel-nav-btn:active {
+      background-color: var(--blush-mid);
+    }
+
+    .carousel-prev { left: 8px; }
+    .carousel-next { right: 8px; }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: rgba(202, 150, 139, 0.3);
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+    }
+
+    .carousel-dot.active {
+      background-color: var(--blush-accent);
+      width: 14px;
+      border-radius: 3px;
+    }
+
+    /* Opening Hours Table inside Blush Card */
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      color: var(--text-body);
+      background-color: var(--blush-mid);
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    .hours-row {
+      border-bottom: 1px solid var(--blush-accent);
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-row.today {
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .hours-day {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hours-time {
+      font-weight: 400;
+    }
+
+    .hours-closed {
+      color: var(--rose-dark);
+      font-style: italic;
+    }
+
+    /* Map embedded wrapper */
+    .map-wrapper {
+      width: 100%;
+      height: 220px;
+      border: 1px solid var(--blush-accent);
+      margin-bottom: 16px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(10%) contrast(98%);
+    }
+
+    /* Share & QR code */
+    .qr-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .qr-box {
+      background-color: #ffffff;
+      padding: 8px;
+      border: 1px solid var(--blush-accent);
+      box-shadow: 0 4px 16px rgba(42, 31, 29, 0.03);
+    }
+
+    .qr-box img {
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+
+    /* Footer structure (Elegant Light `#f8d4c8`) */
+    footer {
+      background-color: #f8d4c8;
+      padding: 52px 24px 100px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--text-body);
+      border-top: none;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    .footer-logo {
+      width: 144px;
+      height: 144px;
+      border-radius: 50%;
+      object-fit: contain;
+      margin-bottom: 18px;
+      border: 1.5px solid var(--blush-accent);
+      background-color: var(--white);
+      padding: 4px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .footer-address {
+      font-size: 11px;
+      color: var(--text-body);
+      opacity: 0.85;
+      letter-spacing: 0.05em;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .footer-payments {
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .footer-payments-heading {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--rose-dark);
+      margin-bottom: 12px;
+    }
+
+    .payment-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .payment-badge {
+      font-size: 8px;
+      border: 1px solid var(--blush-accent);
+      padding: 3px 8px;
+      color: var(--text-body);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+    }
+
+    .copyright {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--rose-dark);
+      margin-top: 24px;
+    }
+
+    /* Floating Contact Drawer Button */
+    .floating-cta-trigger {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #ffffff;
+      border: 1px solid #20ba5a;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+      z-index: 999;
+      cursor: pointer;
+      transition: all var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .floating-cta-trigger:active, .floating-cta-trigger:hover {
+      transform: scale(1.08);
+      background-color: #20ba5a;
+      border-color: #128c7e;
+    }
+
+    /* WhatsApp Button Override class */
+    .btn-whatsapp {
+      background: #25d366 !important;
+      border-color: #25d366 !important;
+      color: #ffffff !important;
+    }
+    .btn-whatsapp:hover, .btn-whatsapp:active {
+      background: #20ba5a !important;
+      border-color: #20ba5a !important;
+      color: #ffffff !important;
+    }
+
+    /* Contact modal popup context */
+    .contact-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-speed) ease;
+    }
+
+    .contact-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(42, 31, 29, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      background-color: var(--white);
+      border: 1px solid var(--blush-mid);
+      box-shadow: 0 8px 40px rgba(42, 31, 29, 0.15);
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      padding: 30px 24px;
+      transform: translateY(100%);
+      transition: transform var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2;
+    }
+
+    .contact-modal.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .btn-close-modal {
+      width: 100%;
+      height: 44px;
+      background: none;
+      border: 1px solid var(--blush-accent);
+      color: var(--text-body);
+      border-radius: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+      font-family: var(--font-body);
+    }
+
+    .btn-close-modal:hover {
+      background-color: var(--blush-mid);
+      color: var(--text-dark);
+    }
+
+    /* Clipboard Toast Container */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background-color: var(--text-dark);
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      pointer-events: none;
+      transition: all var(--transition-speed) cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 11000;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Animations */
+    @keyframes pulseUpDown {
+      0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(8px);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-viewport mobile emulator wrapper -->
+  <div class="app-container">
+
+    <!-- SECTION 0 — Sticky Language switcher -->
+    <header class="lang-switcher" id="lang-header">
+      <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
+    </header>
+
+    <!-- SECTION 1 — Immersive Hero -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title" id="lbl-hero-title">Sirlei Beauty SPA</h1>
+        <h2 class="hero-subtitle" data-i18n="hero_subtitle">Advanced Skin Rejuvenation in Brookfield, CT</h2>
+      </div>
+      <div class="scroll-indicator">
+        <span data-i18n="scroll_down">Scroll Down</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — CTA Buttons -->
+    <section id="cta-buttons">
+      <div class="btn-list">
+        <a class="btn" href="https://sirleibeautyspa.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span data-i18n="btn_website">Visit Our Website</span>
+        </a>
+        <a class="btn btn-primary btn-whatsapp" href="https://wa.me/12039479785" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.67-.852A9.956 9.956 0 0 0 12 22z"/></svg>
+          <span data-i18n="btn_whatsapp">WhatsApp</span>
+        </a>
+        <a class="btn" href="sms:+12039479785">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <span data-i18n="btn_sms">Send SMS</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — About Us -->
+    <section id="about" class="bg-peach">
+      <div class="about-header">
+        <img class="mini-logo" src="https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA-scaled.png" alt="Sirlei SPA Mini Icon">
+        <br>
+        <h3 class="section-title" data-i18n="about_title">About Us</h3>
+      </div>
+      <p class="section-body" data-i18n="about_text">
+        Your skin needs the right treatment, not a generic promise. Sirlei is a specialist in advanced aesthetics, Ultraformer, acne control, and has an exclusive protocol for melasma treatment and control. At Sirlei Beauty Spa, each skin type is evaluated individually to recommend the best path to treat dark spots, acne, sagging, and signs of aging with technology, safety, and professional monitoring.
+      </p>
+    </section>
+
+    <!-- SECTION 4 — Services (Accordion) -->
+    <section id="services" class="bg-alt">
+      <div class="section-header">
+        <h3 class="section-title" data-i18n="services_title">Our Services</h3>
+      </div>
+      <div class="accordion-container" id="services-accordion">
+        <!-- JS inserts Accordion item inputs dynamically here -->
+      </div>
+    </section>
+
+    <!-- SECTION 5 — Before & After Carousel -->
+    <section id="before-after" class="bg-peach">
+      <div class="section-header">
+        <h3 class="section-title" data-i18n="before_after_title">Before & After</h3>
+      </div>
+      <div class="carousel-container">
+        <!-- Navigation trigger buttons -->
+        <button class="carousel-nav-btn carousel-prev" onclick="moveCarousel(-1)">&#10216;</button>
+        <button class="carousel-nav-btn carousel-next" onclick="moveCarousel(1)">&#10217;</button>
+
+        <div class="carousel-stage" id="carouselStage" onscroll="handleCarouselScroll()">
+          <!-- 13 Images added dynamically via Javascript to keep index.html neat and clean of large static blocks -->
+        </div>
+        <div class="carousel-dots" id="carouselDots">
+          <!-- Dots inserts -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — FAQ (Accordion) -->
+    <section id="faq" class="bg-alt">
+      <div class="section-header">
+        <h3 class="section-title" data-i18n="faq_title">Common Questions</h3>
+      </div>
+      <div class="accordion-container" id="faq-accordion">
+        <!-- JS inserts FAQs directly -->
+      </div>
+    </section>
+
+    <!-- SECTION 7 — Hours -->
+    <section id="hours">
+      <div class="section-header">
+        <h3 class="section-title" data-i18n="hours_title">Opening Hours</h3>
+      </div>
+      <div class="hours-table">
+        <div class="hours-row" id="hours-row-0">
+          <span class="hours-day" data-i18n="hours_mon_sat">Monday - Saturday</span>
+          <span class="hours-time">9:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hours-row" id="hours-row-1">
+          <span class="hours-day" data-i18n="hours_sun">Sunday</span>
+          <span class="hours-time hours-closed" data-i18n="hours_closed">Closed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — CTA Buttons (bottom) -->
+    <section id="bottom-ctas">
+      <div class="btn-list">
+        <a class="btn" href="https://sirleibeautyspa.com" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span data-i18n="btn_website">Visit Our Website</span>
+        </a>
+        <a class="btn btn-primary" href="https://g.page/r/CYLdhrdppxZqEBM/review" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <span data-i18n="btn_rate">Rate Us on Google</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 9 — Google Maps Context -->
+    <section id="location-map">
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7026335845794!2d-73.40746742355793!3d41.44567359237722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7f9b14e0141f7%3A0x6a16a769b786dd82!2sSirlei%20Beauty%20Spa!5e0!3m2!1sen!2sus!4v1779234243217!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a class="btn btn-primary" href="https://maps.google.com/?q=246+Federal+Rd+STE+D11+Brookfield+CT+06804" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+        <span data-i18n="btn_directions">Get Directions</span>
+      </a>
+    </section>
+
+    <!-- SECTION 10 — Share / QR Code -->
+    <section id="share-section">
+      <div class="section-header">
+        <h3 class="section-title" data-i18n="share_title">Scan or Share</h3>
+      </div>
+      <div class="qr-container">
+        <div class="qr-box">
+          <img id="qr-img" src="" alt="Dynamic Page QR Code">
+        </div>
+        <button class="btn" onclick="handleSharePage()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+          <span data-i18n="btn_share">Share this page</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION 11 — Footer -->
+    <footer>
+      <img class="footer-logo" src="https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA-scaled.png" alt="Sirlei Beauty SPA Footer Logo">
+      <div class="footer-title">Sirlei Beauty SPA</div>
+      <div class="footer-address">
+        246 Federal Rd STE D11, Brookfield, CT 06804<br>
+        (203) 947-9785
+      </div>
+      <div class="footer-payments">
+        <div class="footer-payments-heading" data-i18n="footer_payment">Payment Methods Accepted</div>
+        <div class="payment-badges" id="pm-list">
+          <span class="payment-badge">Cash</span>
+          <span class="payment-badge">Credit Card</span>
+          <span class="payment-badge">Debit Card</span>
+          <span class="payment-badge">Zelle</span>
+          <span class="payment-badge">Venmo</span>
+        </div>
+      </div>
+      <div class="copyright" data-i18n="footer_rights">© 2025 Sirlei Beauty Spa. All rights reserved.</div>
+    </footer>
+
+    <!-- Fixed Floating Quick Action Trigger button -->
+    <button class="floating-cta-trigger" onclick="toggleContactModal(true)" aria-label="Get in Touch">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </button>
+
+    <!-- Floating Popup Call options Drawer layout -->
+    <div class="contact-modal" id="contactModal">
+      <div class="modal-backdrop" onclick="toggleContactModal(false)"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" data-i18n="popup_title">Get in Touch</h4>
+        </div>
+        <div class="btn-list">
+          <a class="btn btn-primary" href="tel:+12039479785">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span data-i18n="popup_call">Call (203) 947-9785</span>
+          </a>
+          <a class="btn btn-primary btn-whatsapp" href="https://wa.me/12039479785" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2.5 21.5l4.67-.852A9.956 9.956 0 0 0 12 22z"/></svg>
+            <span data-i18n="btn_whatsapp">WhatsApp</span>
+          </a>
+          <a class="btn" href="sms:+12039479785">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span data-i18n="btn_sms">Send SMS</span>
+          </a>
+        </div>
+        <button class="btn-close-modal" onclick="toggleContactModal(false)" data-i18n="popup_close">Close</button>
+      </div>
+    </div>
+
+    <!-- Elegant custom toast overlay -->
+    <div class="toast" id="toastBox">Custom notification text</div>
+
+  </div>
+
+  <script>
+    // COMPLETE i18n Translation Matrix
+    const i18n = {
+      en: {
+        hero_subtitle: "Advanced Skin Rejuvenation in Brookfield, CT",
+        scroll_down: "Scroll Down",
+        btn_website: "Visit Our Website",
+        btn_whatsapp: "WhatsApp",
+        btn_sms: "Send SMS",
+        btn_directions: "Get Directions",
+        btn_rate: "Rate Us on Google",
+        btn_share: "Share this page",
+        about_title: "About Us",
+        about_text: "Your skin needs the right treatment, not a generic promise. Sirlei is a specialist in advanced aesthetics, Ultraformer, acne control, and has an exclusive protocol for melasma treatment and control. At Sirlei Beauty Spa, each skin type is evaluated individually to recommend the best path to treat dark spots, acne, sagging, and signs of aging with technology, safety, and professional monitoring.",
+        services_title: "Our Services",
+        before_after_title: "Before & After",
+        faq_title: "Common Questions",
+        hours_title: "Opening Hours",
+        hours_mon_sat: "Monday - Saturday",
+        hours_sun: "Sunday",
+        hours_closed: "Closed",
+        share_title: "Scan or Share",
+        share_copied: "Link copied to clipboard!",
+        share_error: "Could not share or copy link.",
+        popup_title: "Get in Touch",
+        popup_call: "Call (203) 947-9785",
+        popup_close: "Close",
+        footer_payment: "Payment Methods Accepted",
+        footer_rights: "© 2025 Sirlei Beauty Spa. All rights reserved.",
+        
+        // Services Dictionary
+        s1_title: "Acne Control",
+        s1_desc: "Acne Control is a treatment designed for those who want to improve skin texture, reduce inflammation, and soften marks that affect confidence and how we feel day to day.",
+        s2_title: "Collagen Treatment",
+        s2_desc: "When collagen levels drop, the first signs that bother the most start to appear: sagging, fine lines, dryness, uneven texture… and that's why stimulating collagen is not vanity, it's smart self-care.",
+        s3_title: "Melasma Treatment",
+        s3_desc: "This is an exclusive and patented protocol, developed to offer personalized, safe, and strategic care for skin with melasma, respecting the individual needs of each patient.",
+        s4_title: "Paramedical Micropigmentation",
+        s4_desc: "Paramedical micropigmentation is a specialized technique indicated for camouflaging scars, reconstructing mammary areolas, correcting skin imperfections, and restoring features lost due to health reasons or trauma.",
+        s5_title: "Makeup Services",
+        s5_desc: "Elevate your look with premium makeup, designed to enhance your natural beauty with sophistication. Whether it's for a special event or a moment just for you, our makeup service highlights your features with high-quality products and a flawless finish.",
+        s6_title: "Facial Treatment",
+        s6_desc: "Customized facials to rejuvenate the skin, address specific concerns, and maintain a healthy complexion.",
+        s7_title: "Lip/Brow Micropigmentation",
+        s7_desc: "Enhance your brows with eyebrow micropigmentation – a technique that defines, shapes, and fills in sparse areas, creating a natural, flawless look.",
+        s8_title: "Body Shaping Massage",
+        s8_desc: "This massage boosts circulation, body contour, reduces swelling, and speeds up metabolism all while giving you that amazing feeling of lightness.",
+        s9_title: "IPL Hair Removal",
+        s9_desc: "Our IPL hair removal delivers real results, smoother skin for much longer, and total comfort in every session. Fast, precise, and effective, it treats the root of the problem, giving you practicality, softness, and everyday freedom.",
+
+        // FAQs
+        faq_q1: "How do I book an appointment?",
+        faq_a1: "You can book easily by clicking our WhatsApp button or calling us directly at (203) 947-9785. We will find the perfect time for you.",
+        faq_q2: "What payment methods do you accept?",
+        faq_a2: "We accept Cash, major Credit and Debit Cards, Zelle, and Venmo.",
+        faq_q3: "How long do treatments usually take?",
+        faq_a3: "Most treatments range between 45 and 90 minutes. Initial consultations and standard facial treatments typically take about 1 hour.",
+        faq_q4: "What should I expect on my first visit?",
+        faq_a4: "We will perform a brief personalized skin assessment, discuss your beauty goals, and design a custom treatment plan under a soothing, relaxed atmosphere.",
+        faq_q5: "Are treatments safe for sensitive skin?",
+        faq_a5: "Absolutely. All our protocols can be fully customized with premium, gentle ingredients specifically selected for sensitive skin to prevent irritation."
+      },
+      pt: {
+        hero_subtitle: "Rejuvenescimento Facial Avançado em Brookfield, CT",
+        scroll_down: "Role para Baixo",
+        btn_website: "Visite Nosso Site",
+        btn_whatsapp: "WhatsApp",
+        btn_sms: "Enviar SMS",
+        btn_directions: "Como Chegar",
+        btn_rate: "Avalie-nos no Google",
+        btn_share: "Compartilhar página",
+        about_title: "Sobre Nós",
+        about_text: "Sua pele precisa de um tratamento certo, não de uma promessa genérica. A Sirlei é especialista em estética avançada, Ultraformer, acne control e possui um protocolo exclusivo para tratamento e controle do melasma. No Sirlei Beauty Spa, cada pele é avaliada de forma individual para indicar o melhor caminho para tratar manchas, acne, flacidez e sinais de envelhecimento com tecnologia, segurança e acompanhamento profissional.",
+        services_title: "Nossos Serviços",
+        before_after_title: "Antes e Depois",
+        faq_title: "Perguntas Frequentes",
+        hours_title: "Funcionamento",
+        hours_mon_sat: "Segunda - Sábado",
+        hours_sun: "Domingo",
+        hours_closed: "Fechado",
+        share_title: "Escanear ou Enviar",
+        share_copied: "Link copiado com sucesso!",
+        share_error: "Falha ao compartilhar o link.",
+        popup_title: "Fale Conosco",
+        popup_call: "Ligar para (203) 947-9785",
+        popup_close: "Fechar",
+        footer_payment: "Formas de Pagamento",
+        footer_rights: "© 2025 Sirlei Beauty Spa. Todos os direitos reservados.",
+        
+        // Services
+        s1_title: "Controle de Acne",
+        s1_desc: "O Controle de Acne é um tratamento desenvolvido para quem deseja melhorar a textura da pele, reduzir inflamações e suavizar marcas que afetam a autoconfiança e a nossa rotina diária.",
+        s2_title: "Tratamento de Colágeno",
+        s2_desc: "Quando os níveis de colágeno caem, surgem os primeiros sinais irritantes: flacidez, linhas finas, ressecamento e textura irregular... por isso, estimular o colágeno não é vaidade, é autocuidado inteligente.",
+        s3_title: "Tratamento de Melasma",
+        s3_desc: "Este é um protocolo exclusivo e patenteado, desenvolvido para oferecer um cuidado personalizado, seguro e estratégico para peles com melasma, respeitando as necessidades individuais de cada paciente.",
+        s4_title: "Micropigmentação Paramédica",
+        s4_desc: "A micropigmentação paramédica é uma técnica especializada indicada para camuflar cicatrizes, reconstruir aréolas mamárias, corrigir imperfeições na pele e restaurar traços perdidos devido a motivos de saúde ou traumas.",
+        s5_title: "Serviços de Maquiagem",
+        s5_desc: "Eleve seu visual com uma maquiagem premium, elaborada para realçar sua beleza natural com sofisticação. Seja para um evento especial ou um momento só seu, nosso serviço valoriza seus traços com produtos de alta qualidade e acabamento impecável.",
+        s6_title: "Tratamento Facial",
+        s6_desc: "Tratamentos faciais personalizados para rejuvenescer a pele, tratar preocupações específicas e manter uma aparência saudável e radiante.",
+        s7_title: "Micropigmentação Lábios/Sobrancelhas",
+        s7_desc: "Realce suas sobrancelhas com a nossa micropigmentação – uma técnica que define, desenha e preenche falhas, criando um visual natural e perfeito.",
+        s8_title: "Massagem Modeladora",
+        s8_desc: "Esta massagem estimula a circulação, melhora o contorno corporal, reduz o inchaço e acelera o metabolismo, proporcionando uma maravilhosa sensação de leveza.",
+        s9_title: "Depilação IPL",
+        s9_desc: "Nossa depilação IPL entrega resultados reais, pele lisa por muito mais tempo e conforto total em cada sessão. Rápida, precisa e eficaz, ataca a raiz do problema para sua praticidade, suavidade e liberdade diária.",
+
+        // FAQs
+        faq_q1: "Como agendo uma sessão?",
+        faq_a1: "Você pode agendar facilmente clicando no botão do WhatsApp ou ligando diretamente para (203) 947-9785. Encontraremos o melhor horário.",
+        faq_q2: "Quais formas de pagamento aceitam?",
+        faq_a2: "Aceitamos Dinheiro, os principais Cartões de Crédito/Débito, Zelle e Venmo.",
+        faq_q3: "Quanto tempo duram os tratamentos?",
+        faq_a3: "A maioria dura entre 45 e 90 minutos. Avaliações iniciais e tratamentos faciais padrão costumam levar cerca de 1 hora.",
+        faq_q4: "O que esperar na primeira visita?",
+        faq_a4: "Faremos uma breve avaliação personalizada da sua pele, discutiremos seus objetivos e desenharemos um plano único num ambiente super relaxante.",
+        faq_q5: "É recomendável para peles sensíveis?",
+        faq_a5: "Com certeza. Nossos protocolos são totalmente personalizados com produtos premium extremamente suaves para evitar qualquer irritação."
+      },
+      es: {
+        hero_subtitle: "Rejuvenecimiento Facial Avanzado en Brookfield, CT",
+        scroll_down: "Deslizar Abajo",
+        btn_website: "Visitar Sitio Web",
+        btn_whatsapp: "WhatsApp",
+        btn_sms: "Enviar SMS",
+        btn_directions: "Cómo Llegar",
+        btn_rate: "Califícanos en Google",
+        btn_share: "Compartir página",
+        about_title: "Sobre Nosotros",
+        about_text: "Su piel necesita el tratamiento adecuado, no una promesa genérica. Sirlei es especialista en estética avanzada, Ultraformer, control del acné y cuenta con un protocolo exclusivo para el tratamiento y control del melasma. En Sirlei Beauty Spa, cada piel se evalúa individualmente para recomendar el mejor camino para tratar manchas, acné, flacidez y signos del envejecimiento con tecnología, seguridad y seguimiento profesional.",
+        services_title: "Servicios",
+        before_after_title: "Antes y Después",
+        faq_title: "Preguntas Comunes",
+        hours_title: "Horario Comercial",
+        hours_mon_sat: "Lunes - Sábado",
+        hours_sun: "Domingo",
+        hours_closed: "Cerrado",
+        share_title: "Escanear o Compartir",
+        share_copied: "¡Enlace copiado al portapapeles!",
+        share_error: "Error al compartir enlace.",
+        popup_title: "Contacto Directo",
+        popup_call: "Llamar al (203) 947-9785",
+        popup_close: "Cerrar",
+        footer_payment: "Métodos de Pago",
+        footer_rights: "© 2025 Sirlei Beauty Spa. Todos los derechos reservados.",
+        
+        // Services
+        s1_title: "Control de Acné",
+        s1_desc: "El Control de Acné es un tratamiento diseñado para quienes desean mejorar la textura de la piel, reducir la inflamación y suavizar las marcas que afectan la confianza y nuestra rutina diaria.",
+        s2_title: "Tratamiento de Colágeno",
+        s2_desc: "Cuando los niveles de colágeno disminuyen, aparecen los primeros signos molestos: flacidez, líneas finas, sequedad y textura desigual... por eso, estimular el colágeno no es vanidad, es autocuidado inteligente.",
+        s3_title: "Tratamiento de Melasma",
+        s3_desc: "Este es un protocolo exclusivo y patentado, desarrollado para ofrecer un cuidado personalizado, seguro y estratégico para pieles con melasma, respetando las necesidades individuales de cada paciente.",
+        s4_title: "Micropigmentación Paramédica",
+        s4_desc: "La micropigmentación paramédica es una técnica especializada indicada para camuflar cicatrices, reconstruir aréolas mamarias, corregir imperfecciones cutáneas y restaurar rasgos perdidos debido a motivos de salud o traumas.",
+        s5_title: "Maquillaje Profesional",
+        s5_desc: "Eleva tu mirada con un maquillaje premium, diseñado para realzar tu belleza natural con sofisticación. Ya sea para un evento especial o un momento solo para ti, nuestro servicio resalta tus rasgos con productos de alta calidad.",
+        s6_title: "Tratamiento Facial",
+        s6_desc: "Faciales personalizados para rejuvenecer la piel, abordar inquietudes específicas y mantener una tez saludable y radiante.",
+        s7_title: "Micropigmentación de Labios/Cejas",
+        s7_desc: "Realza tus cejas con nuestra micropigmentación – una técnica que define, da forma y rellena áreas dispersas, creando un aspecto natural y perfecto.",
+        s8_title: "Masaje Reductor",
+        s8_desc: "Este masaje estimula la circulación, mejora el contorno corporal, reduce la hinchazón y acelera el metabolismo, brindándote una fantástica sensación de ligereza.",
+        s9_title: "Depilación IPL",
+        s9_desc: "Nuestra depilación IPL ofrece resultados reales, piel más suave por mucho más tiempo y comodidad total en cada sesión. Rápida, precisa e idónea, ataca la raíz del problema para darte suavidad y libertad diaria.",
+  
+        // FAQs
+        faq_q1: "¿Cómo reservo una cita?",
+        faq_a1: "Puedes reservar fácilmente haciendo clic en nuestro WhatsApp o llamándonos directamente al (203) 947-9785. Encontraremos la hora ideal.",
+        faq_q2: "¿Qué métodos de pago aceptan?",
+        faq_a2: "Aceptamos Efectivo, las principales Tarjetas de Crédito y Débito, Zelle y Venmo.",
+        faq_q3: "¿Cuánto duran las sesiones?",
+        faq_a3: "La mayoría dura entre 45 y 90 minutos. Las consultas iniciales y los tratamientos faciales estándar suelen tomar aproximadamente 1 hora.",
+        faq_q4: "¿Qué espero en mi primera visita?",
+        faq_a4: "Haremos una evaluación personalizada, discutiremos tus metas y diseñaremos un plan adaptado en un ambiente sumamente relajante.",
+        faq_q5: "¿Es seguro para pieles sensibles?",
+        faq_a5: "Por supuesto. Todos nuestros protocolos se personalizan usando productos premium extremadamente suaves seleccionados para evitar irritaciones."
+      }
+    };
+
+    // Services Array Struct
+    const servicesData = [
+      { id: "s1" }, { id: "s2" }, { id: "s3" },
+      { id: "s4" }, { id: "s5" }, { id: "s6" },
+      { id: "s7" }, { id: "s8" }, { id: "s9" }
+    ];
+
+    // FAQ Array Struct
+    const faqData = [
+      { id: "faq_1", q_key: "faq_q1", a_key: "faq_a1" },
+      { id: "faq_2", q_key: "faq_q2", a_key: "faq_a2" },
+      { id: "faq_3", q_key: "faq_q3", a_key: "faq_a3" },
+      { id: "faq_4", q_key: "faq_q4", a_key: "faq_a4" },
+      { id: "faq_5", q_key: "faq_q5", a_key: "faq_a5" }
+    ];
+
+    // Carousel Image URLs
+    const beforeAfterImages = [
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-1.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-2.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-3.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-4.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-5.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-6.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-7.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-8.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-9.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-10.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-11.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-12.jpeg",
+      "https://linkbioinsta.com/wp-content/uploads/2026/05/Sirlei-Beauty-SPA_Antes-e-Depois-13.jpeg"
+    ];
+
+    let currentLanguage = 'en';
+
+    // Highlight today on opening hours row
+    function highlightToday() {
+      const today = new Date().getDay(); // 0 is Sunday, 1-6 Monday-Saturday
+      if (today === 0) {
+        document.getElementById('hours-row-1').classList.add('today');
+      } else {
+        document.getElementById('hours-row-0').classList.add('today');
+      }
+    }
+
+    // Dynamic rendering of Accordions (Services & FAQs)
+    function buildAccordions() {
+      const servicesAccordion = document.getElementById("services-accordion");
+      servicesAccordion.innerHTML = servicesData.map(item => `
+        <div class="accordion-item" id="item-${item.id}">
+          <button class="accordion-trigger" onclick="toggleAccordion('services-accordion', 'item-${item.id}')">
+            <span class="accordion-title" data-i18n="${item.id}_title"></span>
+            <div class="accordion-icon"></div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner" data-i18n="${item.id}_desc"></div>
+          </div>
+        </div>
+      `).join('');
+
+      const faqAccordion = document.getElementById("faq-accordion");
+      faqAccordion.innerHTML = faqData.map(item => `
+        <div class="accordion-item" id="item-${item.id}">
+          <button class="accordion-trigger" onclick="toggleAccordion('faq-accordion', 'item-${item.id}')">
+            <span class="accordion-title" data-i18n="${item.q_key}"></span>
+            <div class="accordion-icon"></div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner" data-i18n="${item.a_key}"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Accordion interaction
+    function toggleAccordion(wrapperId, itemId) {
+      const container = document.getElementById(wrapperId);
+      const items = container.getElementsByClassName("accordion-item");
+      const targetItem = document.getElementById(itemId);
+      const isAlreadyOpen = targetItem.classList.contains("open");
+
+      // Close all items in this section first
+      for (let item of items) {
+        item.classList.remove("open");
+        const content = item.querySelector(".accordion-content");
+        content.style.maxHeight = "0px";
+      }
+
+      // If clicked item was closed, open it in 50ms next tick
+      if (!isAlreadyOpen) {
+        targetItem.classList.add("open");
+        const targetContent = targetItem.querySelector(".accordion-content");
+        const inner = targetItem.querySelector(".accordion-inner");
+        targetContent.style.maxHeight = inner.offsetHeight + 24 + "px"; // padding bottom and top
+      }
+    }
+
+    let autoplayTimer = null;
+    let currentCarouselIndex = 0;
+
+    // Initialize Before/After carousel slides & dots
+    function buildCarousel() {
+      const stage = document.getElementById("carouselStage");
+      if (!stage) return;
+      stage.innerHTML = beforeAfterImages.map((img, i) => `
+        <div class="carousel-slide">
+          <img src="${img}" alt="Antes e Depois Sirlei Beauty SPA - Image ${i + 1}" loading="lazy">
+        </div>
+      `).join('');
+
+      const dots = document.getElementById("carouselDots");
+      if (!dots) return;
+      dots.innerHTML = beforeAfterImages.map((_, i) => `
+        <span class="carousel-dot ${i === 0 ? 'active' : ''}" onclick="goToCarouselSlide(${i})"></span>
+      `).join('');
+    }
+
+    // Autoplay Controller
+    function startAutoplay() {
+      if (autoplayTimer) return;
+      autoplayTimer = setInterval(() => {
+        moveCarousel(1);
+      }, 3500);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    // Carousel swipe & control mechanisms
+    function moveCarousel(direction) {
+      currentCarouselIndex += direction;
+      if (currentCarouselIndex < 0) {
+        currentCarouselIndex = beforeAfterImages.length - 1;
+      } else if (currentCarouselIndex >= beforeAfterImages.length) {
+        currentCarouselIndex = 0;
+      }
+      updateCarousel();
+    }
+
+    function goToCarouselSlide(index) {
+      currentCarouselIndex = index;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const stage = document.getElementById("carouselStage");
+      if (!stage) return;
+      
+      stage.style.transform = `translateX(-${currentCarouselIndex * 100}%)`;
+      
+      const dots = document.querySelectorAll(".carousel-dot");
+      dots.forEach((dot, idx) => {
+        if (idx === currentCarouselIndex) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+      resetAutoplay();
+    }
+
+    function handleCarouselScroll() {}
+
+    // Dynamic QR generation
+    function generatePageQR() {
+      const qrImg = document.getElementById("qr-img");
+      let currentUrl = window.location.href;
+      // Safeguard for development placeholder servers
+      if (currentUrl.includes("localhost") || currentUrl.includes("127.0.0.1")) {
+        currentUrl = "https://sirleibeautyspa.com";
+      }
+      qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + encodeURIComponent(currentUrl);
+    }
+
+    // Share system with fallback
+    function handleSharePage() {
+      let currentUrl = window.location.href;
+      if (currentUrl.includes("localhost") || currentUrl.includes("127.0.0.1")) {
+        currentUrl = "https://sirleibeautyspa.com";
+      }
+
+      if (navigator.share) {
+        navigator.share({
+          title: 'Sirlei Beauty Spa',
+          text: 'Facial SPA in Brookfield, Connecticut - Link Bio',
+          url: currentUrl,
+        })
+        .catch(() => showToast(i18n[currentLanguage].share_error));
+      } else {
+        // Safe clipboard fallback
+        navigator.clipboard.writeText(currentUrl)
+          .then(() => showToast(i18n[currentLanguage].share_copied))
+          .catch(() => showToast(i18n[currentLanguage].share_error));
+      }
+    }
+
+    // Custom non-blocking Toast alerts
+    function showToast(message) {
+      const toast = document.getElementById("toastBox");
+      toast.innerText = message;
+      toast.classList.add("visible");
+      setTimeout(() => {
+        toast.classList.remove("visible");
+      }, 3000);
+    }
+
+    // Floating Popup Call Options toggle
+    function toggleContactModal(show) {
+      const modal = document.getElementById("contactModal");
+      if (show) {
+        modal.classList.add("active");
+      } else {
+        modal.classList.remove("active");
+      }
+    }
+
+    // Core Multi-lingual switch handler
+    function switchLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem("sirlei_spa_lang", lang);
+
+      // Highlight active header option
+      const buttons = document.querySelectorAll(".lang-btn");
+      buttons.forEach(btn => {
+        if (btn.getAttribute("onclick").includes(`'${lang}'`)) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Update document title dynamic
+      document.title = (lang === 'en') ? 
+        "Sirlei Beauty Spa | Facial SPA in Brookfield, CT" : 
+        (lang === 'pt') ? "Sirlei Beauty Spa | SPA Facial em Brookfield, CT" :
+        "Sirlei Beauty Spa | SPA Facial en Brookfield, CT";
+
+      // Translate all UI strings
+      const translatable = document.querySelectorAll("[data-i18n]");
+      translatable.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (i18n[lang] && i18n[lang][key]) {
+          el.innerText = i18n[lang][key];
+        }
+      });
+
+      // Recalculate any open accordion content heights
+      const openAccordions = document.querySelectorAll(".accordion-item.open");
+      openAccordions.forEach(item => {
+        const content = item.querySelector(".accordion-content");
+        const inner = item.querySelector(".accordion-inner");
+        content.style.maxHeight = inner.offsetHeight + 24 + "px";
+      });
+    }
+
+    // Set preferred language on startup
+    function initLanguage() {
+      const savedLang = localStorage.getItem("sirlei_spa_lang");
+      if (savedLang && i18n[savedLang]) {
+        switchLanguage(savedLang);
+      } else {
+        // Detect system preferences
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith("pt")) {
+          switchLanguage("pt");
+        } else if (userLang.startsWith("es")) {
+          switchLanguage("es");
+        } else {
+          switchLanguage("en"); // Default
+        }
+      }
+    }
+
+    // Elegant scroll trigger on scroll IntersectionObserver
+    function initScrollAnimations() {
+      const sections = document.querySelectorAll("section");
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Stop watching after it animates in
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => {
+        if (sec.id === "hero") {
+          sec.classList.add("visible"); // Hero renders instantly
+        } else {
+          observer.observe(sec);
+        }
+      });
+    }
+
+    // Touch Support & swipe gestures for mobile
+    function initSwipeCarousel() {
+      const stage = document.getElementById("carouselStage");
+      const container = document.querySelector(".carousel-container");
+      if (!stage || !container) return;
+
+      let startX = 0;
+      let endX = 0;
+
+      container.addEventListener("touchstart", (e) => {
+        if (e.touches && e.touches.length > 0) {
+          startX = e.touches[0].clientX;
+        }
+        stopAutoplay();
+      }, { passive: true });
+
+      container.addEventListener("touchend", (e) => {
+        if (e.changedTouches && e.changedTouches.length > 0) {
+          endX = e.changedTouches[0].clientX;
+          const diffX = startX - endX;
+          
+          // Swipe threshold of 40 pixels
+          if (Math.abs(diffX) > 40) {
+            if (diffX > 0) {
+              moveCarousel(1); // Swipe left -> Next
+            } else {
+              moveCarousel(-1); // Swipe right -> Prior
+            }
+          } else {
+            resetAutoplay();
+          }
+        } else {
+          resetAutoplay();
+        }
+      }, { passive: true });
+
+      // Support hovering on Desktop
+      container.addEventListener("mouseenter", () => {
+        stopAutoplay();
+      });
+
+      container.addEventListener("mouseleave", () => {
+        startAutoplay();
+      });
+    }
+
+    // Initialize all components together on DOM load
+    window.addEventListener("DOMContentLoaded", () => {
+      buildAccordions();
+      buildCarousel();
+      initLanguage();
+      highlightToday();
+      generatePageQR();
+      initScrollAnimations();
+      initSwipeCarousel();
+      startAutoplay(); // Initiate smooth looping
+    });
+  </script>
+</body>
+</html>
