@@ -184,8 +184,9 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.22em;
-      color: var(--blush-mid);
+      color: #F5EAEA;
       font-weight: 400;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .scroll-indicator {
@@ -262,6 +263,48 @@
       background: var(--rose-dark);
       border-color: var(--rose-dark);
       color: var(--white);
+    }
+
+    /* Custom Overrides for Specific Buttons */
+    .btn-website:hover, .btn-website:active {
+      background-color: #F5EAEA !important;
+      color: var(--text-dark) !important;
+    }
+    .btn-rate {
+      background-color: #CD7372 !important;
+      border-color: #CD7372 !important;
+      color: var(--white) !important;
+    }
+    .btn-rate:hover, .btn-rate:active {
+      background-color: #b35d5c !important;
+      border-color: #b35d5c !important;
+      color: var(--white) !important;
+    }
+    .btn-directions {
+      background-color: #F5EAEA !important;
+      border-color: #F5EAEA !important;
+      color: var(--text-dark) !important;
+    }
+    .btn-directions:hover, .btn-directions:active {
+      background-color: #CD7372 !important;
+      border-color: #CD7372 !important;
+      color: var(--white) !important;
+    }
+
+    /* Accordion styles overrides for Nossos Serviços and Perguntas Frequentes */
+    #services-accordion .accordion-item,
+    #faq-accordion .accordion-item {
+      border: 1px solid #CD7372;
+    }
+    #services-accordion .accordion-item.open,
+    #faq-accordion .accordion-item.open {
+      border-color: #CD7372;
+    }
+    #services-accordion .accordion-icon::before,
+    #services-accordion .accordion-icon::after,
+    #faq-accordion .accordion-icon::before,
+    #faq-accordion .accordion-icon::after {
+      background-color: #CD7372;
     }
 
     /* About Section */
@@ -487,7 +530,7 @@
       border-collapse: collapse;
       font-size: 13px;
       color: var(--text-body);
-      background-color: var(--blush-mid);
+      background-color: #F5EAEA;
       padding: 24px;
       border-radius: 8px;
     }
@@ -562,7 +605,7 @@
 
     /* Footer structure (Elegant Light `#f8d4c8`) */
     footer {
-      background-color: #f8d4c8;
+      background-color: #F5EAEA;
       padding: 52px 24px 100px 24px;
       text-align: center;
       display: flex;
@@ -829,7 +872,7 @@
     <!-- SECTION 2 — CTA Buttons -->
     <section id="cta-buttons">
       <div class="btn-list">
-        <a class="btn" href="https://sirleibeautyspa.com" target="_blank">
+        <a class="btn btn-website" href="https://sirleibeautyspa.com" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <span data-i18n="btn_website">Visit Our Website</span>
         </a>
@@ -915,11 +958,11 @@
     <!-- SECTION 8 — CTA Buttons (bottom) -->
     <section id="bottom-ctas">
       <div class="btn-list">
-        <a class="btn" href="https://sirleibeautyspa.com" target="_blank">
+        <a class="btn btn-website" href="https://sirleibeautyspa.com" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <span data-i18n="btn_website">Visit Our Website</span>
         </a>
-        <a class="btn btn-primary" href="https://g.page/r/CYLdhrdppxZqEBM/review" target="_blank">
+        <a class="btn btn-primary btn-rate" href="https://g.page/r/CYLdhrdppxZqEBM/review" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           <span data-i18n="btn_rate">Rate Us on Google</span>
         </a>
@@ -931,7 +974,7 @@
       <div class="map-wrapper">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7026335845794!2d-73.40746742355793!3d41.44567359237722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7f9b14e0141f7%3A0x6a16a769b786dd82!2sSirlei%20Beauty%20Spa!5e0!3m2!1sen!2sus!4v1779234243217!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <a class="btn btn-primary" href="https://maps.google.com/?q=246+Federal+Rd+STE+D11+Brookfield+CT+06804" target="_blank">
+      <a class="btn btn-primary btn-directions" href="https://maps.google.com/?q=246+Federal+Rd+STE+D11+Brookfield+CT+06804" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
         <span data-i18n="btn_directions">Get Directions</span>
       </a>
